@@ -42,6 +42,8 @@ dqc 一个数据质量系统的诞生
   * rule_logic_monitor:监控规则，需要配置逻辑信息，是个json字符串，程序执行对对json的key进行解析
   * data_owner: 数据owner
   * is_usable: 此条监控规则是否可用，前端配置人员可停启规则
+
+
 * 监控规则库表
   * rule_name: 监控规则大分类，如有效性、唯一性、准确性等等
   * rule_desc: 规则大类的说明
@@ -52,6 +54,16 @@ dqc 一个数据质量系统的诞生
   * is_useDefine: 是否为自定义规则
   * datatype_scope: 此条监控规则的是否范围，比如：同环比波动监测，只能数值型字段
   * stats: 状态，是否可用
+｜ 准确性 ｜ yearOnYear ｜ 数值同比 ｜ 检查数值同比波动率 ｜ 
+｜ 准确性 ｜ chainRatio  ｜ 数值环比 ｜ 检查数值环比波动率 ｜
+｜ 准确性 ｜ logicCheck  ｜ 逻辑检查  ｜ 检查数值间逻辑校验  ｜
+｜ 唯一性 ｜ repeat       ｜ 唯一检查  ｜ 判断主键是否重复 ｜ 
+｜ 完整性  ｜ existNull   ｜ 是否为空 ｜ 指定字段是否为控制，空值比率 ｜ 
+｜ 有效性 ｜ lengthOfAvailability ｜ 长度有效 ｜ 指定有效的固定长度或长度区间 ｜ 
+｜ 有效性 ｜ contentOfAvailability ｜ 内容有效 ｜ 支持写正则表达式，检查相应格式 ｜ 
+｜ 有效性  ｜ rangeOfAvailability  ｜ 值范围有效 ｜ 确定数据值的有效范围
+
+
 
 * 监控规则元数据表
   * rule_name: 监控规则大分类，如有效性、唯一性、准确性等等
